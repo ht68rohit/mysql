@@ -30,7 +30,8 @@ actions:
         required: true
         in: requestBody
         type: map
-    output:   
+    output:
+      type: string
       contentType: application/json
   dropTable:
     help: Drop a table
@@ -46,6 +47,7 @@ actions:
         in: requestBody
         type: string
     output:   
+      type: string
       contentType: application/json
   insert:
     help: Insert one or more entries into a table
@@ -67,6 +69,7 @@ actions:
         in: requestBody
         type: any
     output:   
+      type: string
       contentType: application/json
   select:
     help: Select entries from a table
@@ -90,7 +93,8 @@ actions:
         required: true
         in: requestBody
         type: any
-    output:   
+    output: 
+      type: string  
       contentType: application/json
   update:
     help: Update entries in a table
@@ -120,7 +124,8 @@ actions:
         required: false
         in: requestBody
         type: any
-    output:   
+    output:
+      type: string
       contentType: application/json
   delete:
     help: Delete entries from a table
@@ -145,6 +150,7 @@ actions:
         in: requestBody
         type: any
     output:   
+      type: string
       contentType: application/json
   exec:
     help: Run a SELECT statement
@@ -167,7 +173,8 @@ actions:
         required: false
         in: requestBody
         type: map
-    output:   
+    output:
+      type: string
       contentType: application/json    
 environment:
   MYSQL_HOST:
