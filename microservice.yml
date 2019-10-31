@@ -31,7 +31,6 @@ actions:
         in: requestBody
         type: map
     output:   
-      type: map
       contentType: application/json
   dropTable:
     help: Drop a table
@@ -46,6 +45,8 @@ actions:
         required: true
         in: requestBody
         type: string
+    output:   
+      contentType: application/json
   insert:
     help: Insert one or more entries into a table
     http:
@@ -65,6 +66,8 @@ actions:
         required: true
         in: requestBody
         type: any
+    output:   
+      contentType: application/json
   select:
     help: Select entries from a table
     http:
@@ -87,6 +90,8 @@ actions:
         required: true
         in: requestBody
         type: any
+    output:   
+      contentType: application/json
   update:
     help: Update entries in a table
     http:
@@ -115,6 +120,8 @@ actions:
         required: false
         in: requestBody
         type: any
+    output:   
+      contentType: application/json
   delete:
     help: Delete entries from a table
     http:
@@ -137,6 +144,8 @@ actions:
         required: false
         in: requestBody
         type: any
+    output:   
+      contentType: application/json
   exec:
     help: Run a SELECT statement
     http:
@@ -158,7 +167,8 @@ actions:
         required: false
         in: requestBody
         type: map
-
+    output:   
+      contentType: application/json    
 environment:
   MYSQL_HOST:
     help: The hostname of the MySQL server to connect to
